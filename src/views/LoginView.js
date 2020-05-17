@@ -28,8 +28,6 @@ const styles = {
 
 export default class LoginView extends React.Component {
 
-    // Aamir was here
-
     render() {
 
         return (
