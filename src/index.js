@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <LoginView />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
