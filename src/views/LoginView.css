@@ -1,0 +1,16 @@
+.rightPane {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0% 21% 0% 4%;
+}
+.rightCol {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.rightPane > h1 {
+    font-weight: bold;
+}

@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family : 'maven-pro';
+  src : url("./fonts/MavenPro-VariableFont_wght.ttf");
+  font-weight: 1 999;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');

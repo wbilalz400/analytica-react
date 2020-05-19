@@ -1,0 +1,21 @@
+    .btn-custom {
+        border: 1px solid black;
+        border-radius: 10px;
+        width:120px;
+        height:30px;
+        margin: 4% 12%;
+        transition: ease 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .blue {
+        border-color: lightseagreen;
+    }
+    .blue:hover {
+        background-color: lightseagreen;
+        border-color: lightseagreen;
+        color: white;
+        cursor: pointer;
+    }
+   
