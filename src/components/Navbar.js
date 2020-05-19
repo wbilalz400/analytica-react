@@ -32,6 +32,7 @@ function Navbar() {
                 <a><img src={user}></img></a>
                 
                 </Col>
+                
            </Row>
 
             
