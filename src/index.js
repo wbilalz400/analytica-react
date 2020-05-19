@@ -16,9 +16,9 @@ const images = [
 
 ReactDOM.render(
   <React.StrictMode>
-    <div>
-      <App/>
-      <Slider slides={images}/>
+    <div >
+      <App />
+      <Slider slides={images} autoplay={2}/>
     </div>
     
     

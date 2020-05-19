@@ -7,6 +7,5 @@ const SliderContent = styled.div`
   height: 100%;
   width: ${props => props.width}px;
   display: flex;
-  background: red;
 `
 export default SliderContent
