@@ -79,9 +79,8 @@
 .col1 h1 img{
   
   display: inline-flex;
-  height: 3.75rem;
-  width: 3.25rem;
-  margin-left: 1rem;
+  width: 200px;
+  margin-left: 2rem;
   margin-right: 0.66rem;
   margin-bottom: 1rem;
 

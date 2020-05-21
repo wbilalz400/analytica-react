@@ -7,7 +7,7 @@
     line-height: 28px;
     transition: ease 0.2s;
 
-    margin-top: -2%
+    margin-top: -3%
 }
 
 .input-field:focus {
@@ -22,4 +22,8 @@
 }
 .body,body,html,#root {
     height: 100%;
+}
+.container > .row {
+    flex-wrap: nowrap;
+    height: auto;
 }

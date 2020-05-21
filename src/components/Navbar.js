@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../images/logo2.png'
+import logo from '../images/light-logo.png'
 import user from '../images/user.png'
 import light from '../images/thunder.png'
 import Row from 'react-bootstrap/Row'
@@ -12,7 +12,7 @@ function Navbar() {
             <Row className='row'>
                 <Col className='col1'>
                 
-                   <h1><img src={logo}></img>Analytica.IoT
+                   <h1><img width='200px' src={logo}></img>
                     </h1>
             
                     <img className='img1' src={light}/>
