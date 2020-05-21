@@ -81,7 +81,7 @@ export default class LoginView extends React.Component {
                 console.log(d);
                 let obj =d
                 if (d.status === "OK") {
-                    toast("Logged In Successfully");
+                    toast.success("Logged In Successfully");
                     this.setState({loading:false})
                 }
             })
