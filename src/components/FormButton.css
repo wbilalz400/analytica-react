@@ -23,12 +23,21 @@
         flex:9;
         text-align: center;
     }
-    .blue {
+    .btn-custom.blue {
         border-color: lightseagreen;
     }
-    .blue:hover {
+    .btn-custom.blue:hover {
         background-color: lightseagreen;
         border-color: lightseagreen;
+        color: white;
+        cursor: pointer;
+    }
+    .btn-custom.orange {
+        border-color: orangered;
+    }
+    .btn-custom.orange:hover {
+        background-color: orange;
+        border-color: orangered;
         color: white;
         cursor: pointer;
     }

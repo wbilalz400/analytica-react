@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './index.css';
 import App from './App';
 import LoginView from './views/LoginView'
 import Slider from './components/Slider'
+import RegisterView from './views/RegisterView'
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import HomeView from './views/HomeView';
 
 const images = [
   'https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
@@ -16,12 +24,18 @@ const images = [
 
 ReactDOM.render(
   <React.StrictMode>
-    <div >
-      <App />
-      <Slider slides={images} autoplay={2}/>
-    </div>
-    
-    
+  <Router>
+    <Switch>
+      <div>
+        <Route exact path="/" component={Slider}/>
+        <Route exact path="/login" component={LoginView}/>
+        <Route exact path="/register" component={RegisterView}/>
+        <Route exact path="/home" component={HomeView}/>
+
+
+      </div>
+    </Switch> 
+  </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

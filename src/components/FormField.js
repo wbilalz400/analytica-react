@@ -15,6 +15,7 @@ export default class FormField extends React.Component {
                 flexDirection: 'column',
                 margin: '1% 12%',
                 'flex-wrap': 'none',
+                marginBottom: '-2%'
             },
             label: {
                 fontSize: '1.2em',
@@ -34,8 +35,9 @@ export default class FormField extends React.Component {
             <Row  style ={this.styles.Col}>
                 <label style={this.styles.label}>
                     {this.props.label}
+                    { this.props.required? <span style={{color:'red'}}>*</span>: ''}
                 </label>
-                <input className='input-field'  type={this.props.type} name={this.props.name} placeholder={this.props.placeholder} onChange={this.props.onChange} >
+                <input className={'input-field ' + this.props.color}  type={this.props.type} name={this.props.name} placeholder={this.props.placeholder} onChange={this.props.onChange} >
 
                 </input>
                 <label style={this.styles.errLabel}>

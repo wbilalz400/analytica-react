@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import FormField from '../components/FormField'
 import FormButton from '../components/FormButton';
 import LightLogo from '../images/light-logo.png';
+import loader from "../images/loading-circle-blue.svg";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,7 +19,7 @@ const styles = {
         display: 'flex',
         flex:'9',
         width:'45%',
-        
+        minWidth: '340px'
     },
     card : {
         marginRight: '25%', 
@@ -77,13 +78,23 @@ export default class LoginView extends React.Component {
                 'Content-Type': 'application/json'
               },
             body:JSON.stringify({email:this.state.email,
-            password:this.state.pass})}).then(r => r.json()).then( d => {
+            password:this.state.pass})})
+            .then(r => r.json())
+            .then( d => {
                 console.log(d);
                 let obj =d
                 if (d.status === "OK") {
                     toast.success("Logged In Successfully");
-                    this.setState({loading:false})
+                    this.setState({loading:false});
+                    localStorage.setItem("token",d.jwtToken);
+                    window.location.href="/home";   
+                } else {
+                    toast.error("Invalid Credentials");
+                    this.setState({loading:false});
                 }
+            }).catch    (e => {
+                toast.error("An unknown error occured");
+                this.setState({loading:false});
             })
         }
     }
@@ -107,9 +118,9 @@ export default class LoginView extends React.Component {
                 <img src={LightLogo} width='200px'></img>
             <div style={styles.leftPane}>
                 <Container style={styles.card}>
-                    <FormField label="Email"  err={this.state.errEmail} name = "email" type="email" onChange = {this.fieldChange} errLabel="Please enter email" placeholder="abc@xyz.com"/>
+                    <FormField label="Email"  color="blue" err={this.state.errEmail} name = "email" type="email" onChange = {this.fieldChange} errLabel="Please enter email" placeholder="abc@xyz.com"/>
                     <FormField label="Password" err={this.state.errPass} name="pass" type="password" onChange = {this.fieldChange} errLabel="Please enter password" />
-                    <FormButton color="blue" label="Login" onClick={this.doLogin} loading={this.state.loading} />
+                    <FormButton loader={loader} color="blue" label="Login" onClick={this.doLogin} loading={this.state.loading} />
                 </Container>
             </div>
             </Col>
@@ -117,7 +128,7 @@ export default class LoginView extends React.Component {
                 <div className='rightPane'>
                 <h1>Login</h1>
                 <h2>Enter your email and password to login and access you analytics!</h2>
-                <p>Not a user? <a href='#register'>Register today</a></p>
+                <p>Not a user? <a href='/register'>Register today</a></p>
                 </div>
             </Col>
             </Row>

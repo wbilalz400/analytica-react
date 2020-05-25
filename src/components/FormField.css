@@ -12,12 +12,22 @@
 
 .input-field:focus {
     outline: none;
-    border-color: blue;
    
 }
-.input-field:hover {
+.input-field.blue:focus {
+    border-color: blue;
+}
+.input-field.blue:hover {
     background-color: lightseagreen;
     border-color: lightseagreen;
+    color: white;
+}
+.input-field.orange:focus {
+    border-color: orangered;
+}
+.input-field.orange:hover {
+    background-color: orange;
+    border-color: orangered;
     color: white;
 }
 .body,body,html,#root {

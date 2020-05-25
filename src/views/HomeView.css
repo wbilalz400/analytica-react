@@ -1,0 +1,69 @@
+.HomeBody {
+    background: linear-gradient(133deg, #264d59, #43978d, #f9e07f, #f9ad6a, #d46c4e);
+    background-size: 1000% 1000%;
+    height: 100%;
+    -webkit-animation: AnimationName 42s ease infinite;
+    -moz-animation: AnimationName 42s ease infinite;
+    animation: AnimationName 42s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 7%}
+    50%{background-position:100% 94%}
+    100%{background-position:0% 7%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 7%}
+    50%{background-position:100% 94%}
+    100%{background-position:0% 7%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 7%}
+    50%{background-position:100% 94%}
+    100%{background-position:0% 7%}
+}
+
+.HomeBody {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100%;
+}
+.sideBar {
+    flex:2;
+    webkit-box-shadow: 10px 0px 36px -14px rgba(0,0,0,0.54);
+    -moz-box-shadow: 10px 0px 36px -14px rgba(0,0,0,0.54);
+    box-shadow: 10px 0px 36px -14px rgba(0,0,0,0.54);
+    background-color: white;
+}
+.main {
+    flex:8;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.header {
+    flex: 1;
+    backdrop-filter: blur(100px);
+    display: flex;
+    flex-direction: row;
+}
+.content {
+    flex:10;
+}
+.subHeader {
+    flex: 1;
+    display: flex;
+    align-items: center
+}
+.subHeader.center {
+    justify-content: center;
+}
+.subHeader.right {
+    justify-content: end;
+}
+.personalInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
