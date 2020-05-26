@@ -35,6 +35,7 @@
     -moz-box-shadow: 10px 0px 36px -14px rgba(0,0,0,0.54);
     box-shadow: 10px 0px 36px -14px rgba(0,0,0,0.54);
     background-color: white;
+    transition: all 0.75s;
 }
 .main {
     flex:8;
@@ -54,7 +55,8 @@
 .subHeader {
     flex: 1;
     display: flex;
-    align-items: center
+    align-items: center;
+    z-index: 1;
 }
 .subHeader.center {
     justify-content: center;
@@ -63,7 +65,69 @@
     justify-content: end;
 }
 .personalInfo {
+    margin-top: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.personalInfo > img {
+    margin-bottom: 2%;
+}
+.personalInfo > h1 {
+    font-size: 1.7rem;
+    margin: auto 2%;
+    text-align: auto;
+    transition: all 1s;
+}
+.collapsed .personalInfo > h1 {
+    opacity: 0;
+    display: none;
+}
+.collapseBtn {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 5%;
+}
+
+.collapseBtn > p {
+    margin:0;
+    transition: all 0.75s;
+    opacity: 0;
+}
+.collapseBtn > svg:hover {
+    color: coral;
+}
+.collapseBtn > svg:hover + p {
+    opacity: 1;
+}
+.collapseBtn > svg {
+    transition: all 0.5s;
+
+    background-color: white;
+    border-radius: 100%;
+}
+.collapsed  .collapseBtn {
+    left: 14%
+}
+.personalInfo > * {
+    margin: 2%
+}
+.collapsed .sideBar{
+    flex-grow: 1;
+}
+.collapsed .main {
+    flex-grow: 9    ;
+}
+.content {
+    backdrop-filter: blur(200px);
+    margin: 30px;
+    transition: all 1s;
+}
+.content.loading {
+    background: white;
 }
