@@ -1,19 +1,27 @@
 import React from 'react'
-import img1 from '../../assets/images/IMG_9169.JPG'
-
+import img2 from '../../assets/images/play.png'
+import './card-style.css'
 const CardUI = props => {
     return (
         <div className="card text-center">
             <div className="overflow" >
-                <img src={img1} alt=""  className="card-img-top"/>
+                <img src={props.imgsrc} alt=""  className="card-img-top"/>
             </div>
             <div className='card-body text-dark'>
-                <h4 className='card-title'>Watch Video</h4>
+
+                <a href ="link" >
+                <div class="cardimg" >
+      
+                 <p className='card-title'> Watch Video <img src ={img2} /></p>
+                </div>
+                </a>
+                
                 <p className='card-text text-secondary'>
-                    Get Started!
-                    Create your own Dashboard, Add Widgets And Wallah!
+                    {props.title}
                 </p>
-                <a href='#' className="btn btn-outline-success">Open on Youtube</a>
+                <button className="btn btn-outline-danger">Open on YouTube <i class="fa fa-youtube-play"></i></button>
+                
+               
             </div>
         </div>
     )
