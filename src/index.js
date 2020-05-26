@@ -14,6 +14,7 @@ import RegisterView from './views/RegisterView'
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeView from './views/HomeView';
+import Card from './components/Cards/Cards'
 
 
 
@@ -22,7 +23,7 @@ ReactDOM.render(
   <Router>
     <Switch>
       <div>
-        <Route exact path="/" component={App}/>
+        <Route exact path="/" component={Card}/>
         <Route exact path="/login" component={LoginView}/>
         <Route exact path="/register" component={RegisterView}/>
         <Route exact path="/home" component={HomeView}/>
