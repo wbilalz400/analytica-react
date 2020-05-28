@@ -15,11 +15,18 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
+    "classnames": "^2.2.6",
     "emotion": "^10.0.27",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
+<<<<<<< HEAD
+    "react-chartjs-2": "^2.9.0",
+    "react-countup": "^4.3.3",
+=======
     "react-collapse": "^5.0.1",
+>>>>>>> a12c4cb7a2642728ee864c22dd0c17644c1b859a
     "react-dom": "^16.13.1",
     "react-fontawesome": "^1.7.1",
     "react-router-dom": "^5.2.0",
