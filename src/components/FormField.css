@@ -1,5 +1,4 @@
 .input-field, .input-field:focus {
-    border-radius: 10px;
     border-style: solid;
     border-width: 1px;
     border-color: black;
@@ -15,7 +14,7 @@
    
 }
 .input-field.blue:focus {
-    border-color: blue;
+    outline: blue;
 }
 .input-field.blue:hover {
     background-color: lightseagreen;
@@ -23,7 +22,7 @@
     color: white;
 }
 .input-field.orange:focus {
-    border-color: orangered;
+    outline: orangered;
 }
 .input-field.orange:hover {
     background-color: orange;

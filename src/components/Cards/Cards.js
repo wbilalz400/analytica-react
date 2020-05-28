@@ -9,7 +9,7 @@ class Cards extends Component{
 
     render(){
         return(
-            <div className="container-fluid d-flex justify-content-center">
+            <div className=" CardsMain container-fluid d-flex justify-content-center">
                 <div className="row">
                     <div className="col-md-3">
                     <CardUI imgsrc={img1} title={"How to create your custom Dashboards"}/>

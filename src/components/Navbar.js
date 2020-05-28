@@ -5,34 +5,68 @@ import light from '../images/thunder.png'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container';
+import './NavBar.css';
 
 
-function Navbar() {
+export default class Navbar extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            headerBackground: false
+        };
+        this.handleScroll = () => {
+            let scrollY = window.pageYOffset;
+            if (scrollY > window.innerHeight) {
+                this.setState({headerBackground : true});
+            } else {
+                this.setState({headerBackground : false});
+    
+            }
+        }
+    }
+    componentDidMount = () => {
+        window.addEventListener('scroll', this.handleScroll);
+      }
+    
+    render() {
     return (
-            <Row className='row'>
-                <Col className='col1'>
+            <div className={'NavBar ' + (this.state.headerBackground? "back" : '')}>
+                
+                
+                <div className='SubHeader'>
+                    
+                </div>
+                <div className='SubHeader'>
+                <div className="Links">
+                    <a href=''>About</a>
+                </div>
+                <div className="Links">
+                    <a href=''>Pricing</a>
+                </div>
+                </div>
+
+                <div className='SubHeader HeaderLogo'>
                 
                    <h1><img width='200px' src={logo}></img>
                     </h1>
             
-                    <img className='img1' src={light}/>
                   
-                </Col>
-                <Col className='col2'>
-                    <ul>
-                        <li><a href=''>About</a></li>
-                        <li><a href=''>Pricing</a></li>
-                        <li><a href=''>Dashboards</a></li>
-                        <li><a href=''>Resources</a></li>
-                        <li><a href=''>Platforms</a></li>
-                    </ul>
-                </Col>
-                <Col className='col3'>
+                </div>
+                <div className='SubHeader'>
+                <div className="Links">
+                    <a href=''>Resources</a>
+                </div>
+                <div className="Links">
+                    <a href=''>Platforms</a>
+                </div>
+                </div>
+                <div className='SubHeader'>
                 <button>Demo</button>
-                <a><img src={user}></img></a>
-                
-                </Col>
-           </Row>
+                <a><img src={user} width='50px'></img></a>
+                </div>
+
+              
+           </div>
 
             
            
@@ -44,6 +78,6 @@ function Navbar() {
           
             
         
-    )
+    );
+    }
 }
-export default Navbar;

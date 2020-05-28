@@ -27,6 +27,10 @@
 .App-link {
   color: #61dafb;
 }
+.HomeMain {
+  display: flex;
+  flex-direction: column;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -39,9 +43,7 @@
 * {
   font-family: 'Open Sans', sans-serif;
 }
-.row{
-  height: 4.5rem;
-}
+
 
 
 .col1{

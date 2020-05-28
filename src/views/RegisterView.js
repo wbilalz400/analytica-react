@@ -27,7 +27,6 @@ const styles = {
         background: 'white',
         border: '5px',
         borderColor: 'white',
-        borderRadius : '20px',
         height: '95%',
         boxShadow: "10px 10px 16px -5px rgba(0,0,0,0.75)",
         display: 'flex',

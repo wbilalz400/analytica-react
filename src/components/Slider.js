@@ -6,6 +6,7 @@ import SliderContent from './SliderContent'
 import Slide from './Slide'
 import Arrow from './Arrow'
 import Dots from './Dots'
+import './Slider.css';
 
 const getWidth = () => window.innerWidth
 
@@ -113,6 +114,7 @@ const prevSlide = () =>
 
   
   return (
+    <div className='SliderMain'>
     <div css={SliderCSS}>
       <SliderContent
         translate={translate}
@@ -133,6 +135,7 @@ const prevSlide = () =>
 
       <Dots slides={props.slides} activeIndex={activeIndex} />
     </div>
+    </div>
   )
 }
 Slider.defaultProps = {
@@ -142,8 +145,8 @@ Slider.defaultProps = {
 
 const SliderCSS = css`
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  height: 90vh;
+  width: inherit;
   margin: 0 auto;
   overflow: hidden;
 `

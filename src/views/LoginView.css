@@ -10,6 +10,7 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    background-color: whitesmoke;
 }
 .rightPane > h1 {
     font-weight: bold;

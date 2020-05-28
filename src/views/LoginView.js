@@ -27,7 +27,6 @@ const styles = {
         background: 'white',
         border: '5px',
         borderColor: 'white',
-        borderRadius : '20px',
         height: '60%',
         boxShadow: "10px 10px 16px -5px rgba(0,0,0,0.75)",
         display: 'flex',
@@ -119,7 +118,7 @@ export default class LoginView extends React.Component {
             <div style={styles.leftPane}>
                 <Container style={styles.card}>
                     <FormField label="Email"  color="blue" err={this.state.errEmail} name = "email" type="email" onChange = {this.fieldChange} errLabel="Please enter email" placeholder="abc@xyz.com"/>
-                    <FormField label="Password" err={this.state.errPass} name="pass" type="password" onChange = {this.fieldChange} errLabel="Please enter password" />
+                    <FormField label="Password"  color="blue" err={this.state.errPass} name="pass" type="password" onChange = {this.fieldChange} errLabel="Please enter password" />
                     <FormButton loader={loader} color="blue" label="Login" onClick={this.doLogin} loading={this.state.loading} />
                 </Container>
             </div>

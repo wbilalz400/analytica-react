@@ -14,11 +14,12 @@ const images = [
 
 function App() {
   return (
-    <div>
-       <Navbar/>
-       <Slider slides={images} autoplay={2}/>   
+    <div className="HomeMain">
+      <Navbar/>
+      <Slider slides={images}/>   
       
-         <Card/>
+      <Card/>
+      <Card/>
       
        
     </div>

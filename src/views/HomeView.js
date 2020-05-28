@@ -8,21 +8,24 @@ import editLogo from '../images/edit-icon.svg';
 import {circle} from '@fortawesome/fontawesome-free'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import leftArrowIcon from '../images/left-arrow-icon.svg';
-import { faCircle, faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons'
+import { faCircle, faArrowAltCircleLeft, faArrowAltCircleRight,faUserCircle, faArrowAltCircleDown, faEdit } from '@fortawesome/free-regular-svg-icons'
+import {Collapse} from 'react-collapse';
 
 export default class extends React.Component {
     constructor() {
         super();
-        this.state = {auth : false,collapse:false};
+        this.state = {auth : false,collapse:false,r:180};
          
         this.logOut = () => {
             localStorage.removeItem("token");
             window.location.href = '/';
         }
 
-        this.collapse = () => {
-            this.setState({collapse: !this.state.collapse});
-            this.stopLoading();
+        
+        this.collapse = (collapseItem) => {
+            let obj = {};
+            obj[collapseItem] = !this.state[collapseItem];
+            this.setState(obj);
         }
         this.loading = () => {
             this.interval = setInterval(() => {
@@ -72,9 +75,9 @@ export default class extends React.Component {
         }
         return (
             
-            <div className={"HomeBody " + (this.state.collapse? "collapsed": "")}>
+            <div className={"HomeBody " + (this.state.sideBarCollapse? "collapsed": "")}>
                 <div className="sideBar">
-                   <div className="collapseBtn" onClick={this.collapse}>
+                   <div className="collapseBtn" onClick={() => this.setState({sideBarCollapse: !this.state.sideBarCollapse})}>
                         <FontAwesomeIcon icon={this.state.collapse?faArrowAltCircleRight: faArrowAltCircleLeft} size='2x'/>
                        <p>Collapse</p>
 
@@ -83,6 +86,20 @@ export default class extends React.Component {
                        <img src={userLogo} width = '80px'></img>
                        <h1> {this.state.user.name}</h1>
                         <FormButton color='orange' label="Sign Out" onClick={this.logOut} ></FormButton>
+                   </div>
+                   <div className="Menus">
+                       <div className="MenuItem">
+                           <FontAwesomeIcon icon={faUserCircle}/>
+                           <h3>My Profile</h3>
+                           <FontAwesomeIcon  onClick={e => this.collapse('collapseProfile')} icon={faArrowAltCircleDown} rotation={this.state.collapseProfile? 180:0}></FontAwesomeIcon>
+                           
+                       </div>
+                       <Collapse isOpened={this.state.collapseProfile}>
+                       <div className='ChildItem'>
+                           <FontAwesomeIcon icon={faEdit}/>
+                           <h3>Edit Profile</h3>
+                        </div>
+                        </Collapse>
                    </div>
                 </div>
                 <div className="main">
