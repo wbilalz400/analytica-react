@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar'
 import Slider from './components/Slider'
 import Card from './components/Cards/Cards'
+import Covid from './components/Covid19/Covid19'
 
 const images = [
   'https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
@@ -16,10 +17,10 @@ function App() {
   return (
     <div className="HomeMain">
       <Navbar/>
-      <Slider slides={images}/>   
+      <Slider slides={images} autoplay={2}/>   
       
       <Card/>
-      <Card/>
+      <Covid/>
       
        
     </div>

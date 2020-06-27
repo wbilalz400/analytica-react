@@ -15,6 +15,7 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeView from './views/HomeView';
 import Card from './components/Cards/Cards'
+import Covid from './components/Covid19/Covid19'
 
 
 

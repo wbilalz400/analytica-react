@@ -2,7 +2,7 @@
 
 .CardsMain {
     flex:9;
-    background-image: linear-gradient( rgb(119,136,153),rgb(119,136,153),rgb(119,136,153),rgb(119,136,153),rgb(119,136,153),rgb(119,136,153),rgb(119,136,153));
+    background-image: linear-gradient( rgb(119,136,153),rgb(119,136,153),rgb(119,136,153),rgb(119,136,153),rgb(119,136,153),rgb(119,136,153),rgb(180, 203, 224));
 
 }
 .card{
