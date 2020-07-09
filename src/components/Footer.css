@@ -1,0 +1,35 @@
+.mainfooter{
+    background-color: #1d1f22;
+}
+.container{
+    
+    padding-top: 3%;
+}
+.container p{
+    color: aliceblue;
+    font-size: smaller;
+}
+
+.container li{
+    color: aliceblue;
+    font-size: smaller;
+
+}
+.container h6{
+    color: rgb(138, 142, 145);
+    font-size: medium;
+
+}
+.container .pl{
+    float: left;
+
+}
+.container .pr{
+    float: right;
+
+}
+.container a:hover{
+    text-decoration: none;
+}
+
+
