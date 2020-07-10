@@ -13,12 +13,12 @@ function Footer() {
                     <div className='col-md-3 col-sm-6'>
                     <h6 className='mts'>FOR PR PROS </h6>
                         <ul className='list-unstyled'>
-                        <a href=''><li>Overview</li></a>
-                        <a href=''><li>Media Database</li></a>
-                        <a href=''><li>Monitoring and Alerts</li></a>
-                        <a href=''><li>Pitching</li></a>
-                        <a href=''><li>Collaboration</li></a>
-                        <a href=''><li>Reporting and Measurement</li></a>
+                            <li><a href=''>Overview</a></li>
+                            <li><a href=''>Media Database</a></li>
+                            <li><a href=''>Monitoring and Alerts</a></li>
+                            <li><a href=''>Pitching</a></li>
+                            <li><a href=''>Collaboration</a></li>
+                            <li><a href=''>Reporting and Measurement</a></li>
                         </ul>
                     </div>
                     {/*Column2*/}
@@ -26,12 +26,12 @@ function Footer() {
                     <div className='col-md-3 col-sm-6'>
                     <h6>RESOURCES</h6>
                         <ul className='list-unstyled'>
-                            <a href=''><li>Use Cases</li></a>
-                            <a href=''><li>Webinars</li></a>
-                            <a href=''><li>Guides and Demos</li></a>
-                            <a href=''><li>Research</li></a>
-                            <a href=''><li>Blog</li></a>
-                            <a href=''><li>Trends</li></a>
+                            <li><a href=''>Use Cases</a></li>
+                            <li><a href=''>Webinars</a></li>
+                            <li><a href=''>Guides and Demos</a></li>
+                            <li><a href=''>Research</a></li>
+                            <li><a href=''>Blog</a></li>
+                            <li><a href=''>Trends</a></li>
                         </ul>
                     </div>
                     {/*Column3*/}
@@ -39,30 +39,55 @@ function Footer() {
                     <div className='col-md-3 col-sm-6'>
                     <h6>COMPANY</h6>
                         <ul className='list-unstyled'>
-                            <a href=''><li>About</li></a>
-                            <a href=''><li>Staff</li></a>
-                            <a href=''><li>Careers</li></a>
+                            <li><a href=''>About</a></li>
+                            <li><a href=''>Staff</a></li>
+                            <li><a href=''>Careers</a></li>      
                         </ul>
                     </div>
-                    {/*Column*/}
+                    {/*Column4*/}
                    
                     <div className='col-md-3 col-sm-6'>
                     <h6>CONTACT US</h6>
+                   
                         <ul className='list-unstyled'>
-                            <li><a href=''>Feedback/Support</a></li>
-                            <a href=''><li>analyticaiot.com</li></a>
-                            <a href=''><li>Twitter</li></a>
-                            <a href=''><li>Facebook</li></a>
-                            <a href=''><li>21343</li></a>
+                        
+                            <li> <a href=''> 
+                            <span class="fa-stack">
+                            <i class="fa fa-question-circle fa-stack-1x"></i>
+                            </span> Feedback/Support
+                            </a></li>
+                            <li> <a href=''> 
+                            <span class="fa-stack">
+                            <i class="fa fa-envelope fa-stack-1x"></i>
+                            </span> analyticaiot.com
+                            </a></li>
+                            <li> <a href=''> 
+                            <span class="fa-stack">
+                            <i class="fa fa-twitter fa-stack-1x"></i>
+                            </span> Twitter
+                            </a></li>
+                            <li> <a href=''> 
+                            <span class="fa-stack">
+                            <i class="fa fa-facebook fa-stack-1x"></i>
+                            </span> Facebook
+                            </a></li>
+                            <li> <a href=''> 
+                            <span class="fa-stack">
+                            <i class="fa fa-phone fa-stack-1x"></i>
+                            </span> 0900-78601
+                            </a></li>
+                           
+                            
+                          
                         </ul>
                     </div>
                 </div>
-                <div className='row'>
+                <div className='row1'>
                    
                     {/*Column1*/}
                    
-                    <div className='col-md-3 col-sm-6'>
-                        <div className='footer-bottom'>
+                    <div className='col1'>
+                        <div className='bottomfooter'>
                             <p className='pl'>
                                Private Policy . Terms {'&'} Conditions
                             </p>
@@ -71,18 +96,10 @@ function Footer() {
                    
                        
                     </div>
-                    {/*Column2*/}
                    
-                    <div className='col-md-3 col-sm-6'></div>
-                  
-                   {/*Column2*/}
                    
-                   <div className='col-md-3 col-sm-6'></div>
-                  
-                   {/*Column2*/}
-                   
-                   <div className='col-md-3 col-sm-6'>
-                        <div className='footer-bottom'>
+                   <div className='col2'>
+                        <div className='bottomfooter'>
                             <p className='pr'>
                                 &copy; {new Date().getFullYear()} Analytica.IoT . All Rights Reserved
                             </p>

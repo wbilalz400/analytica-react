@@ -30,6 +30,36 @@
 }
 .container a:hover{
     text-decoration: none;
+    color: rgb(76, 76, 167);
 }
+.container a{
+    text-decoration: none;
+    color: rgb(213, 213, 255);
+}
+.container i{
+  
+    color: rgb(197, 197, 252);
+ 
+}
+.container i:hover{
 
+    color: rgb(76, 76, 167);
+}
+.row1{
+    flex: 1;
+    flex-direction: column;
+    background-color: #1d1f22;
+}
+.col1{
+    float: left;
+    background-color: #1d1f22;
+}
+.col2{
+    
+    float: right;
+    background-color: #1d1f22;
+}
+.bottomfooter{
+    background-color: #1d1f22;
+}
 
