@@ -6,6 +6,7 @@ import Slider from './components/Slider'
 import Card from './components/Cards/Cards'
 import Covid from './components/Covid19/Covid19'
 import Footer from './components/Footer'
+import Build from './components/Build'
 
 const images = [
   'https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
@@ -19,7 +20,7 @@ function App() {
     <div className="HomeMain">
       <Navbar/>
       <Slider slides={images} autoplay={2}/>   
-      
+      <Build/>
       <Card/>
       <Covid/>
       <Footer/>
