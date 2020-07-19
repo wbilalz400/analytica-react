@@ -47,14 +47,14 @@ export default class extends React.Component {
                 {
                     x: 0,
                     y: 0,
-                    h: 3,
-                    w: 5,
+                    h: 8,
+                    w: 9,
                 },
                 {
                     x: 0,
-                    y: 4,
+                    y: 0,
                     h: 3,
-                    w: 5,
+                    w: 3,
                 }
             ],
             options: {
@@ -144,18 +144,18 @@ export default class extends React.Component {
                         <div className="subHeader center"><img src={logo} width='200px' /></div>
                         <div className="subHeader right"></div>
                     </div>
-                    <div className={"content " + (this.state.loading ? "" : "")}>
+                    <div style={{overflow:'scroll'}} className={"content " + (this.state.loading ? "" : "")}>
                         <div className={"dashboardMain"}>
                             <h1>Dashboard</h1>
-                            <GridLayout onLayoutChange={layout => this.setState({layout: layout})} className="gridLayout" rowHeight={30} width={1000} cols={8}>
-                                <div key="0" data-grid={this.state.layout[0]} > <Chart
+                            <GridLayout onLayoutChange={layout => this.setState({layout: layout})} className="gridLayout" rowHeight={30} width={1000} cols={10}>
+                                <div key="0" className="widgetCard" data-grid={this.state.layout[0]} > <Chart
                                     options={this.state.options}
                                     series={this.state.series}
                                     height={this.state.layout[0].h*30}
                                     type="bar" 
                                     width={this.state.layout[0].w*95}
                                 /></div>
-                                <div key="1" data-grid={this.state.layout[1]} > <Chart
+                                <div key="1" className="widgetCard" data-grid={this.state.layout[1]} > <Chart
                                     options={this.state.options}
                                     series={this.state.series}
                                     height={this.state.layout[1].h*30}
