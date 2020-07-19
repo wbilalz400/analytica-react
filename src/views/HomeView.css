@@ -178,3 +178,12 @@
       font-size: 1rem;
       
   }
+
+  .dashboardMain {
+      background-color: white;
+      display: flex;
+      height: 100%;
+      width:100%;
+      flex-direction: column;
+      overflow: scroll
+  }
