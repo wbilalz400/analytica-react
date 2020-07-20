@@ -2,6 +2,11 @@ import React from 'react';
 import ProtectedView from './ProtectedView';
 import './HomeView.css'
 import logo from '../images/light-logo.png';
+import barIcon from '../images/bar.png';
+import radarIcon from '../images/radar.png';
+import donutIcon from '../images/donut.png';
+import lineIcon from '../images/line.png';
+
 import userLogo from '../images/user-icon.svg';
 import FormButton from '../components/FormButton'
 import editLogo from '../images/edit-icon.svg';
@@ -10,10 +15,11 @@ import '../css/styles1.css';
 import { circle } from '@fortawesome/fontawesome-free'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import leftArrowIcon from '../images/left-arrow-icon.svg';
-import { faCircle, faArrowAltCircleLeft, faArrowAltCircleRight, faUserCircle, faArrowAltCircleDown, faEdit } from '@fortawesome/free-regular-svg-icons'
+import { faCircle,faTimesCircle, faArrowAltCircleLeft, faArrowAltCircleRight, faUserCircle, faArrowAltCircleDown, faEdit } from '@fortawesome/free-regular-svg-icons'
 import { Collapse } from 'react-collapse';
 import GridLayout from 'react-grid-layout';
 import Chart from "react-apexcharts";
+import DashboardView from './DashboardView.js';
 
 
 export default class extends React.Component {
@@ -32,16 +38,17 @@ export default class extends React.Component {
             obj[collapseItem] = !this.state[collapseItem];
             this.setState(obj);
         }
-        this.loading = () => {
-            this.interval = setInterval(() => {
-                this.setState({ loading: !this.state.loading });
-            }, 800);
-        }
-        this.stopLoading = () => {
-            clearInterval(this.interval);
-            this.setState({ loading: false })
-        }
-        this.loading();
+        // this.loading = () => {
+        //     this.interval = setInterval(() => {
+        //         this.setState({ loading: !this.state.loading });
+        //     }, 800);
+        // }
+        // this.stopLoading = () => {
+        //     clearInterval(this.interval);
+        //     this.setState({ loading: false })
+        // }
+        // this.loading();
+
         this.state = {
             layout: [
                 {
@@ -51,11 +58,104 @@ export default class extends React.Component {
                     w: 9,
                 },
                 {
+
                     x: 0,
                     y: 0,
                     h: 3,
                     w: 3,
                 }
+            ],
+            widgets: [
+                {
+                    id: '0',
+                    type: 'chart',
+                    chartOptions: {
+                        type: 'bar',
+                        options: {
+                            chart: {
+                                id: "basic-bar"
+                            },
+                            xaxis: {
+                                categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+                            }
+                        }
+                    },
+                    data: {
+                        series: [
+                            {
+                                name: "series-1",
+                                data: [30, 40, 45, 50, 49, 60, 70, 91]
+                            }
+                        ]
+                    },
+                    layout: {
+                        i: '0',
+                        x: 0,
+                        y: 0,
+                        h: 8,
+                        w: 9,
+                    }
+                },
+                {
+                    id: '1',
+                    type: 'chart',
+                    chartOptions: {
+                        type: 'bar',
+                        options: {
+                            chart: {
+                                id: "basic-bar"
+                            },
+                            xaxis: {
+                                categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+                            }
+                        }
+                    },
+                    data: {
+                        series: [
+                            {
+                                name: "series-1",
+                                data: [30, 40, 45, 50, 49, 60, 70, 91]
+                            }
+                        ]
+                    },
+                    layout: {
+                        i: '1',
+                        x: 0,
+                        y: 0,
+                        h: 8,
+                        w: 9,
+                    }
+                },
+                {
+                    id: '2',
+                    type: 'chart',
+                    chartOptions: {
+                        type: 'bar',
+                        options: {
+                            chart: {
+                                id: "basic-bar"
+                            },
+                            xaxis: {
+                                categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+                            }
+                        }
+                    },
+                    data: {
+                        series: [
+                            {
+                                name: "series-1",
+                                data: [30, 40, 45, 50, 49, 60, 70, 91]
+                            }
+                        ]
+                    },
+                    layout: {
+                        i: '2',
+                        x: 0,
+                        y: 0,
+                        h: 8,
+                        w: 9,
+                    }
+                },
             ],
             options: {
                 chart: {
@@ -73,8 +173,58 @@ export default class extends React.Component {
             ]
         };
     }
-
+    generateChart = type => {
+        let toR = {
+            id: this.state.widgets.length.toString(),
+            type: 'chart',
+            chartOptions: {
+                type: type,
+                options: {
+                    chart: {
+                        id: "basic-bar"
+                    },
+                    xaxis: {
+                        categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+                    }
+                }
+            },
+            data: {
+                series: [
+                    {
+                        name: "series-1",
+                        data: [30, 40, 45, 50, 49, 60, 70, 91]
+                    }
+                ]
+            },
+            layout: {
+                i: this.state.widgets.length.toString(),
+                x: 0,
+                y: 0,
+                h: 8,
+                w: 9,
+            }
+        };
+        if (type === "donut") toR.data.series = toR.data.series[0].data;
+        return toR; 
+    }
+    addChart = type => {
+        this.setState({widgets: [...this.state.widgets,this.generateChart(type)]});
+    }
+    
+    updateLayout = layout => {
+        let widgets = [...this.state.widgets];
+        layout.forEach(lay => {
+            let index = widgets.findIndex(o => o.id === lay.i);
+            widgets[index].layout = lay;
+        });
+        this.setState({widgets:widgets});
+        localStorage.setItem("dashboard",JSON.stringify(this.state.widgets));
+    }
     componentDidMount() {
+        if (localStorage.getItem("dashboard")) {
+            let widgets = JSON.parse(localStorage.getItem("dashboard"));
+            //this.setState({widgets:widgets});
+        }
         if (localStorage.getItem("token")) {
             this.state.user = fetch("http://localhost:3001/login", {
                 method: 'post',
@@ -97,11 +247,11 @@ export default class extends React.Component {
 
                 })
                 .catch(err => {
-                    window.location.href = '/login';
+                    // window.location.href = '/login';
 
                 });
         } else {
-            window.location.href = '/login';
+            // window.location.href = '/login';
         }
     }
     
@@ -109,6 +259,8 @@ export default class extends React.Component {
         if (!this.state.auth) {
             return (<div style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }} className="HomeBody"><img src={logo} width='300' px></img></div>);
         }
+        console.log("refresh state");
+
         return (
 
             <div className={"HomeBody " + (this.state.sideBarCollapse ? "collapsed" : "")}>
@@ -145,25 +297,7 @@ export default class extends React.Component {
                         <div className="subHeader right"></div>
                     </div>
                     <div style={{overflow:'scroll'}} className={"content " + (this.state.loading ? "" : "")}>
-                        <div className={"dashboardMain"}>
-                            <h1>Dashboard</h1>
-                            <GridLayout onLayoutChange={layout => this.setState({layout: layout})} className="gridLayout" rowHeight={30} width={1000} cols={10}>
-                                <div key="0" className="widgetCard" data-grid={this.state.layout[0]} > <Chart
-                                    options={this.state.options}
-                                    series={this.state.series}
-                                    height={this.state.layout[0].h*30}
-                                    type="bar" 
-                                    width={this.state.layout[0].w*95}
-                                /></div>
-                                <div key="1" className="widgetCard" data-grid={this.state.layout[1]} > <Chart
-                                    options={this.state.options}
-                                    series={this.state.series}
-                                    height={this.state.layout[1].h*30}
-                                    type="line" 
-                                    width={this.state.layout[1].w*95}
-                                /></div>
-                            </GridLayout>
-                        </div>
+                       <DashboardView/>
                     </div>
                 </div>
             </div>
