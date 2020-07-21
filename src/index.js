@@ -29,6 +29,7 @@ ReactDOM.render(
         <Route exact path="/login" component={LoginView}/>
         <Route exact path="/register" component={RegisterView}/>
         <Route exact path="/home" component={HomeView}/>
+       
 
 
       </div>
