@@ -12,7 +12,7 @@ function Build() {
                <div className='col22'>
                <h1><i class="fa fa-line-chart"></i><i class="fa fa-bar-chart" aria-hidden="true"></i><i class="fa fa-pie-chart" aria-hidden="true"></i><i class="fa fa-area-chart" aria-hidden="true"></i></h1>
                    <h2>Create Your Custom Dashboards</h2>
-                   <h4>Add Widgets</h4>
+                   <h4 className='norm'>Add Widgets</h4>
                    <p>Use multiple Use Cases and perform the desired Analytics.
                    Perform statistics and visualize data to 
                        see trends and extract out meaningful patterns. </p>

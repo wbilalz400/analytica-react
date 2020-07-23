@@ -1,6 +1,6 @@
 
 .full{
-    background-color: rgb(212, 212, 247);
+    background-color: rgba(210, 244, 250, 0.87);
     height: 400px;
     flex: 1;
 
@@ -36,6 +36,9 @@
     animation-duration: 1s;
    
     
+}
+.norm{
+    background-color: rgba(177, 237, 248, 0);
 }
 @keyframes example {
     from {transform: rotate(20deg);}
