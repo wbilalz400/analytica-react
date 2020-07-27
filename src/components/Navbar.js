@@ -38,16 +38,16 @@ export default class Navbar extends React.Component {
                 </div>
                 <div className='SubHeader'>
                 <div className="Links">
-                    <a href=''>About</a>
+                    <a href='/about'>About</a>
                 </div>
                 <div className="Links">
-                    <a href=''>Pricing</a>
+                    <a href='/price'>Pricing</a>
                 </div>
                 </div>
 
                 <div className='SubHeader HeaderLogo'>
                 
-                   <h1><img width='200px' src={logo}></img>
+                   <h1><a href='/'><img width='200px' src={logo}></img></a>
                     </h1>
             
                   
@@ -62,7 +62,7 @@ export default class Navbar extends React.Component {
                 </div>
                 <div className='SubHeader'>
                 <button>Demo</button>
-                <a><img src={user} width='50px'></img></a>
+                <a href='/login'><img src={user} width='50px'></img></a>
                 </div>
 
               
