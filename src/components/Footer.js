@@ -82,33 +82,20 @@ function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className='row1'>
+                <div className='endfoot'>
                    
-                    {/*Column1*/}
-                   
-                    <div className='col1'>
-                        <div className='bottomfooter'>
+                          
+                        
                             <p className='pl'>
                                Private Policy . Terms {'&'} Conditions
                             </p>
 
-                        </div>
-                   
-                       
-                    </div>
-                   
-                   
-                   <div className='col2'>
-                        <div className='bottomfooter'>
+                        
                             <p className='pr'>
                                 &copy; {new Date().getFullYear()} Analytica.IoT . All Rights Reserved
                             </p>
 
-                        </div>
-                        
-                   
-                       
-                    </div>
+
                   
                 </div>
                 

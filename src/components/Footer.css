@@ -45,20 +45,18 @@
 
     color: rgb(76, 76, 167);
 }
-.row1{
-    flex: 1;
-    flex-direction: column;
+.endfoot{
+   
+    display: flex;
+    flex-direction: row;
     background-color: #1d1f22;
 }
-.col1{
-    float: left;
-    background-color: #1d1f22;
+.pl{
+    padding-right: 57%;
 }
-.col2{
-    
-    float: right;
-    background-color: #1d1f22;
-}
+
+
+ 
 .bottomfooter{
     background-color: #1d1f22;
 }

@@ -16,6 +16,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeView from './views/HomeView';
 import Card from './components/Cards/Cards'
 import Covid from './components/Covid19/Covid19'
+import About from './sections/About'
+import Navbar from './components/Navbar'
+import PriceTable from './sections/Price'
 
 
 
@@ -25,10 +28,13 @@ ReactDOM.render(
   <Router>
     <Switch>
       <div>
-        <Route exact path="/" component={App}/>
+      <Route exact path="/" component={App}/>
+        <Route exact path="/about" component={About}/>
+        <Route exact path="/price" component={PriceTable}/>
         <Route exact path="/login" component={LoginView}/>
         <Route exact path="/register" component={RegisterView}/>
         <Route exact path="/home" component={HomeView}/>
+       
 
 
       </div>
