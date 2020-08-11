@@ -1,0 +1,37 @@
+
+.rightPane {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0% 21% 0% 4%;
+}
+.rightCol {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: whitesmoke;
+
+}
+.rightPane > h1 {
+    font-weight: bold;
+}
+.body.registerBody > .row > .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f12711;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(-25deg, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(-25deg, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+.body.registerBody > .row >  .right  > img {
+    flex:1;
+    margin-top: 4%;
+}
+.registerBody > .Toastify__toast--success {
+    background-color: orangered;
+}
+#root > div {
+    height: 100%;
+}

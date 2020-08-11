@@ -1,0 +1,23 @@
+.covidbody{
+    background-color: darkcyan;
+}
+.container{
+    display: flex;
+    flex: 9;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient( rgb(180, 203, 224),rgb(180, 203, 224),rgb(207, 220, 231),rgb(207, 220, 231),rgb(207, 220, 231),rgb(207, 220, 231),rgb(207, 220, 231));
+}
+.image{
+    width: 370px;
+    margin-top: 50px;
+}
+@media (max-width: 770px){
+    .container{
+        margin: 0 10%;
+    }
+    .image{
+        width: 100%;
+    }
+}

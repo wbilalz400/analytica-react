@@ -1,0 +1,85 @@
+
+.full{
+    background-color: rgba(210, 244, 250, 0.87);
+    height: 400px;
+    flex: 1;
+
+}
+.rowf{
+    height: 550px;
+    flex: 1;
+    flex-direction: column;
+}
+.col11{
+    width: 50%;
+    float: left;
+   
+}
+.col11 .imgbuild{
+    margin-top: 70px;
+    margin-left: 45px;    
+    width:80%;
+    height: 400px;
+    transform: rotate(20deg);
+    
+    
+}
+.col22{  
+    width: 50%;
+    float: right;
+    
+}
+.col11 .imgbuild:hover{
+    width:80%;
+    transform: rotate(0deg);
+    animation-name: example;
+    animation-duration: 1s;
+   
+    
+}
+.norm{
+    background-color: rgba(177, 237, 248, 0);
+}
+@keyframes example {
+    from {transform: rotate(20deg);}
+    to {transform: rotate(0deg);}
+  }
+  .col22 h4{
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+   
+    color: aliceblue;
+  }
+.col22 h1 i{
+    color: rgb(25, 3, 53);
+    padding-right: 10px;
+    margin-top: 20px;
+}
+.col22 h1{
+    margin-top: 15%;
+    padding-left: 10%;
+}
+.col22 h4{
+    padding-left: 10%;
+    color: rgb(25, 3, 53);
+}
+.col22 h2{
+    padding-left: 10%;
+    color: rgb(0, 0, 0);
+}
+.col22 p{
+    padding-left: 10%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20%;
+}
+.start{
+    margin-left: 10%;
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(25, 3, 53);
+    color: aliceblue;
+    height: 40px;
+    width: 160px;
+}

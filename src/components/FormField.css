@@ -1,0 +1,38 @@
+.input-field, .input-field:focus {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    padding-left: 12px;
+    line-height: 28px;
+    transition: ease 0.2s;
+
+    margin-top: -3%
+}
+
+.input-field:focus {
+    outline: none;
+   
+}
+.input-field.blue:focus {
+    outline: blue;
+}
+.input-field.blue:hover {
+    background-color: lightseagreen;
+    border-color: lightseagreen;
+    color: white;
+}
+.input-field.orange:focus {
+    outline: orangered;
+}
+.input-field.orange:hover {
+    background-color: orange;
+    border-color: orangered;
+    color: white;
+}
+.body,body,html,#root {
+    height: 100%;
+}
+.container > .row {
+    flex-wrap: nowrap;
+    height: auto;
+}

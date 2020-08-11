@@ -1,0 +1,240 @@
+.HomeBody {
+    background: linear-gradient(133deg, #264d59, #43978d, #f9e07f, #f9ad6a, #d46c4e);
+    background-size: 1000% 1000%;
+    height: 100%;
+    /* -webkit-animation: AnimationName 42s ease infinite;
+    -moz-animation: AnimationName 42s ease infinite;
+    animation: AnimationName 42s ease infinite; */
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 7%
+    }
+    50% {
+        background-position: 100% 94%
+    }
+    100% {
+        background-position: 0% 7%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 7%
+    }
+    50% {
+        background-position: 100% 94%
+    }
+    100% {
+        background-position: 0% 7%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 7%
+    }
+    50% {
+        background-position: 100% 94%
+    }
+    100% {
+        background-position: 0% 7%
+    }
+}
+
+.HomeBody {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100%;
+}
+
+.sideBar {
+    flex: 2;
+    webkit-box-shadow: 10px 0px 36px -14px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: 10px 0px 36px -14px rgba(0, 0, 0, 0.54);
+    box-shadow: 10px 0px 36px -14px rgba(0, 0, 0, 0.54);
+    background-color: white;
+    transition: all 0.75s;
+}
+
+.main {
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    backdrop-filter: blur (1000px);
+}
+
+.header {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    flex: 10;
+}
+
+.subHeader {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.subHeader.center {
+    justify-content: center;
+}
+
+.subHeader.right {
+    justify-content: end;
+}
+
+.personalInfo {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.personalInfo>img {
+    margin-bottom: 2%;
+}
+
+.personalInfo>h1 {
+    font-size: 1.7rem;
+    margin: auto 2%;
+    text-align: auto;
+    transition: all 1s;
+}
+
+.collapsed .personalInfo>h1 {
+    opacity: 0;
+    display: none;
+}
+
+.collapseBtn {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 5%;
+}
+
+.collapseBtn>p {
+    margin: 0;
+    transition: all 0.75s;
+    opacity: 0;
+}
+
+.collapseBtn>svg:hover {
+    color: coral;
+}
+
+.collapseBtn>svg:hover+p {
+    opacity: 1;
+}
+
+.collapseBtn>svg {
+    transition: all 0.5s;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.collapsed .collapseBtn {
+    left: 14%
+}
+
+.personalInfo>* {
+    margin: 2%
+}
+
+.collapsed .sideBar {
+    flex-grow: 1;
+}
+
+.collapsed .main {
+    flex-grow: 9;
+}
+
+.content {
+    margin: 30px;
+    transition: all 1s;
+}
+
+.content.loading {
+    background: white;
+}
+
+.MenuItem {
+    flex-direction: row;
+    display: flex;
+    margin-left: 20px;
+    margin-right:20px;
+    padding: 17px 0px;
+    border-top:1px solid rgba(0, 0, 0, 0.3);
+    transition: 0.5s color;
+    align-items: center;
+}
+.MenuItem:hover {
+    color: orangered;
+    cursor: pointer;
+}
+
+.Menus {
+    margin-top: 5%;
+}
+
+.MenuItem>h3 {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.MenuItem> *:not(h3):last-child {
+    margin-left: auto;
+    margin-right: 30px;
+    transition: spin 3s;
+    rotate: 60;
+}
+
+.ReactCollapse--collapse {
+    transition: height 500ms;
+    display: flex;
+    flex-direction: row;
+}
+
+.ChildItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20%;
+}
+.collapsed .MenuItem > h3 {
+    font-size:0;
+}
+.ChildItem:first-child {}
+
+.ReactCollapse--content {}
+
+.ChildItem>h3 {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.dashboardMain {
+    background-color: white;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    overflow: auto;
+}

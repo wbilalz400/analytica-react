@@ -1,0 +1,63 @@
+.mainfooter{
+    background-color: #1d1f22;
+}
+.container{
+    
+    padding-top: 3%;
+}
+.container p{
+    color: aliceblue;
+    font-size: smaller;
+}
+
+.container li{
+    color: aliceblue;
+    font-size: smaller;
+
+}
+.container h6{
+    color: rgb(138, 142, 145);
+    font-size: medium;
+
+}
+.container .pl{
+    float: left;
+
+}
+.container .pr{
+    float: right;
+
+}
+.container a:hover{
+    text-decoration: none;
+    color: rgb(76, 76, 167);
+}
+.container a{
+    text-decoration: none;
+    color: rgb(213, 213, 255);
+}
+.container i{
+  
+    color: rgb(197, 197, 252);
+ 
+}
+.container i:hover{
+
+    color: rgb(76, 76, 167);
+}
+.endfoot{
+   
+    display: flex;
+    flex-direction: row;
+    background-color: #1d1f22;
+}
+.pl{
+    padding-right: 57%;
+}
+
+
+ 
+.bottomfooter{
+    background-color: #1d1f22;
+}
+
