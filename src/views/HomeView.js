@@ -21,13 +21,15 @@ import { circle } from '@fortawesome/fontawesome-free'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import leftArrowIcon from '../images/left-arrow-icon.svg';
 import { faCircle, faTimesCircle, faArrowAltCircleLeft, faArrowAltCircleRight, faUserCircle, faArrowAltCircleDown, faEdit, faCalendar } from '@fortawesome/free-regular-svg-icons'
-import { faWifi } from '@fortawesome/free-solid-svg-icons';
+import { faWifi, faBolt, faClipboardList } from '@fortawesome/free-solid-svg-icons';
 import { Collapse } from 'react-collapse';
 import GridLayout from 'react-grid-layout';
 import Chart from "react-apexcharts";
 import DashboardView from './DashboardView.js';
 import DevicesView from './Devices.js';
+import Actions from './Actions';
 import DeviceView from './DeviceView';
+import MyProfileView from './MyProfileView';
 
 export default class extends React.Component {
     constructor() {
@@ -294,14 +296,24 @@ export default class extends React.Component {
                             <h3>Devices</h3>
 
                         </div>
-                        <div className="MenuItem">
+                        <div onClick={() => window.location.href='/home/actions'} className="MenuItem">
+                            <FontAwesomeIcon icon={faBolt} />
+                            <h3>Actions</h3>
+
+                        </div>
+                        <div onClick={() => window.location.href='/home/devices'} className="MenuItem">
+                            <FontAwesomeIcon icon={faClipboardList} />
+                            <h3>Reports</h3>
+
+                        </div>
+                        <div onClick={e => this.collapse('collapseProfile')}  className="MenuItem">
                             <FontAwesomeIcon icon={faUserCircle} />
                             <h3>My Profile</h3>
                             <FontAwesomeIcon onClick={e => this.collapse('collapseProfile')} icon={faArrowAltCircleDown} rotation={this.state.collapseProfile ? 180 : 0}></FontAwesomeIcon>
 
                         </div>
                         <Collapse isOpened={this.state.collapseProfile}>
-                            <div className='ChildItem'>
+                            <div onClick={() => window.location.href="/home/editprofile"} className='ChildItem'>
                                 <FontAwesomeIcon icon={faEdit} />
                                 <h3>Edit Profile</h3>
                             </div>
@@ -320,7 +332,9 @@ export default class extends React.Component {
                             <Switch>
                                 <Route path='/home/devices/:device' component={DeviceView}/>
                                 <Route path='/home/devices' component={DevicesView}/>
-                                <Route path="/home" component={DashboardView}/>
+                                <Route path='/home/editprofile' render={(props) => <MyProfileView user={this.state.user} {...props}/>}/>
+                                <Route path='/home/actions' component = {Actions}/>
+                                <Route path="/home" render={() => <DashboardView/>}/>
 
                             </Switch>
                         </Router>
